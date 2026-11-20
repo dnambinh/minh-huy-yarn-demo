@@ -100,3 +100,15 @@ address { white-space: pre-line; font-style: normal; }
   .contact-list { padding-inline: 16px; }
   .footer { align-items: start; flex-direction: column; gap: 12px; }
 }
+
+.gallery-jump { justify-self: start; color: var(--blue); font-weight: 700; text-underline-offset: .24em; }
+.factory-gallery h2 { margin-bottom: 24px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.gallery-item { display: block; border: 1px solid var(--line); border-radius: 10px; background: var(--white); text-decoration: none; }
+.gallery-item img { aspect-ratio: 4 / 3; height: auto; border-radius: 9px 9px 0 0; background: var(--pale); }
+.gallery-item span { display: block; padding: 12px 14px 14px; font-size: .93rem; line-height: 1.4; }
+a.gallery-item:hover span { color: var(--blue); text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 800px) {
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .gallery-item span { padding-inline: 10px; }
+}
