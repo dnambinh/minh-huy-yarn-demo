@@ -70,15 +70,20 @@ h3 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); letter-spacing: -.05em; }
 .about-copy p { color: #f0f8fb; max-width: 46ch; }
 .contact { padding-block: clamp(50px, 6vw, 90px); background: var(--navy); color: var(--white); border-top: 5px solid var(--red); }
 .contact-heading { margin-bottom: 30px; }
-.contact-heading p, .contact-note { color: #dce8f0; margin-top: 12px; }
+.contact-languages { display: flex; flex-wrap: wrap; gap: .25rem .85rem; margin-top: 8px; color: #fff; font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 700; }
+.contact-languages span + span { border-inline-start: 1px solid #86adbf; padding-inline-start: .85rem; }
+.contact-intro { display: grid; gap: 3px; margin-top: 12px; }
+.contact-intro p, .contact-note { color: #dce8f0; }
+.contact-note { margin-top: 12px; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .contact-list { display: grid; align-self: start; margin: 0; padding: 5px 24px; border-radius: 12px; background: var(--white); color: var(--ink); }
 .contact-list > div { padding-block: 14px; }
 .contact-list > div + div { border-top: 1px solid var(--line); }
 .contact-list dt { font-weight: 720; }
+.contact-list dt small { display: block; color: var(--muted); font-size: .875rem; font-weight: 550; }
 .contact-list dd { margin: 3px 0 0; color: var(--muted); overflow-wrap: anywhere; }
 .contact-list a { color: var(--blue); text-underline-offset: .19em; }
-.contact-channels > div { display: grid; grid-template-columns: minmax(6.5rem, .48fr) 1fr; gap: 10px; }
+.contact-channels > div { display: grid; grid-template-columns: minmax(8.5rem, .62fr) minmax(0, 1fr); gap: 10px; align-items: start; }
 .contact-channels dd { margin: 0; }
 address { white-space: pre-line; font-style: normal; }
 .back-top { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid #fff; border-radius: 10px; background: var(--red); color: var(--white); text-decoration: none; font-size: 1.55rem; box-shadow: 0 2px 12px #122b412e; }
@@ -102,6 +107,7 @@ address { white-space: pre-line; font-style: normal; }
   .header-row nav { width: 100%; justify-content: space-between; }
   .product-grid { grid-template-columns: 1fr; }
   .contact-list { padding-inline: 16px; }
+  .contact-channels > div { grid-template-columns: 1fr; gap: 1px; }
   .footer { align-items: start; flex-direction: column; gap: 12px; }
 }
 
